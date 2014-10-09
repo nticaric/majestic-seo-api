@@ -15,6 +15,11 @@ class MajesticAPIService {
         $this->apiKey = $apiKey;
     }
 
+    public function setResponseType($type)
+    {
+        $this->responseType = $type;
+    }
+
     public function executeCommand($command, $params = array())
     {
         $client = new Client;
