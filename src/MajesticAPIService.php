@@ -15,7 +15,7 @@ class MajesticAPIService {
         $this->apiKey = $apiKey;
     }
 
-    public function executeCommand($command, $params)
+    public function executeCommand($command, $params = array())
     {
         $client = new Client;
 
@@ -25,5 +25,27 @@ class MajesticAPIService {
         return $client->get($this->endpoint ."/". $this->responseType, [
             'query' => $params
         ]);
+    }
+
+    public function __call($name, $arguments)
+    {
+        $command = ucfirst($name);
+        if(isset($arguments[1])) {
+            $params  = $arguments[1];
+        } else {
+            $params = array();
+        }
+
+        if(is_string($arguments[0])) {
+            $params['item'] = $arguments[0];
+        } elseif(is_array($arguments[0])) {
+            $counter = 0;
+            foreach ($arguments[0] as $url) {
+                $params['item' . $counter] = $url;
+                $counter++;
+            }
+            $params['items'] = $counter;
+        }
+        return $this->executeCommand($command, $params);
     }
 }
