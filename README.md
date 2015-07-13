@@ -1,3 +1,5 @@
+[![Total Downloads](https://img.shields.io/packagist/dt/nticaric/majestic-seo-api.svg?style=flat-square)](https://packagist.org/packages/nticaric/majestic-seo-api)
+
 majestic-seo-api
 ================
 
@@ -10,7 +12,7 @@ The easiest way to install Majestic SEO API is via [composer](http://getcomposer
 ```json
 {
     "require": {
-        "nticaric/majestic-seo-api": "dev-master"
+        "nticaric/majestic-seo-api": "1.0.*"
     }
 }
 ```
