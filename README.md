@@ -29,7 +29,7 @@ Usage:
     use Nticaric\Majestic\MajesticAPIService;
 
     //if the second parameter is set to true, the sanbox mode is used
-    $service = MajesticAPIService("your_api_key", true);
+    $service = new MajesticAPIService("your_api_key", true);
     $params = array(
         'MaxSameSourceURLs' => 1
     );
@@ -47,7 +47,7 @@ Another way to do the same is:
     use Nticaric\Majestic\MajesticAPIService;
 
     //if the second parameter is set to true, the sanbox mode is used
-    $service = MajesticAPIService("your_api_key", true);
+    $service = new MajesticAPIService("your_api_key", true);
     $params = array(
         'item' => 'example.com',
         'MaxSameSourceURLs' => 1
