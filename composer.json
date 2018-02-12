@@ -2,7 +2,7 @@
     "name": "nticaric/majestic-seo-api",
     "description": "PHP library for making requests to the Majestic SEO API",
     "homepage": "http://github.com/nticaric/majestic-seo-api",
-    "license": "GNU General Public License",
+    "license": "MIT",
     "type": "library",
     "authors": [
         {
